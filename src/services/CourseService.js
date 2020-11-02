@@ -16,4 +16,20 @@ export const CourseService = {
             }
         });
     },
+    enrollCourse: function (token, courseName){
+        return axios.post('/api/course/enrollment', {
+            courseName
+        }, {
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        });
+    },
+    dropCourse: function (token, courseName) {
+        return axios.delete(`/api/course/enrollment/${courseName}`, {
+            headers:{
+                Authorization: `Bearer ${token}`
+            }
+        });
+    }
 };

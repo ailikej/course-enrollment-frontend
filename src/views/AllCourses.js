@@ -27,8 +27,21 @@ export default function AllCourses(props) {
 
     return (
         <div>
-            <CourseTable courses={courses} />
+            <CourseTable courses={courses}
+                         action actionButtonLabel="Enroll"
+                         handleActionButtonClick={handleEnrollCourse} />
         </div>
 
     );
+
+    function handleEnrollCourse(course){
+        CourseService.enrollCourse(token, course.courseName)
+            .then(response => {
+                alert(`Sucessfully enrolled course ${course.courseName}`);
+            })
+            .catch(error => {
+                alert(`Failed to enroll course ${course.courseName}`);
+
+            });
+    }
 }

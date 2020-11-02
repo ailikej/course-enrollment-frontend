@@ -61,11 +61,12 @@ export default function LoginDialog(props) {
         JwtService.login(username,password)
             .then(response => {
             cookie.save(TOKEN_COOKIE_NAME, response.data.id_token);
-            window.location.reload();
+            window.location.reload();  // 触发渲染
         })
         .catch(error => {
             console.error(error);
-            setErrorMessage(error.response.data.detail);
+            const message = error.response.data.detail || error.response.data.title || error.response.data.error.message;
+            setErrorMessage(message);
         })
             .finally(()=> setLoading(false));
         }

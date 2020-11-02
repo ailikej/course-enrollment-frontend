@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import {Button} from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -68,6 +69,7 @@ export default function CourseTable(props) {
             <StyledTableCell align="right">Course Content</StyledTableCell>
             <StyledTableCell align="right">Course Location</StyledTableCell>
             <StyledTableCell align="right">Teacher Id</StyledTableCell>
+            <StyledTableCell align="right">Action</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -87,6 +89,13 @@ export default function CourseTable(props) {
           <StyledTableCell align="right">{course.courseContent}</StyledTableCell>
           <StyledTableCell align="right">{course.courseLocation}</StyledTableCell>
           <StyledTableCell align="right">{course.teacherId}</StyledTableCell>
+          <StyledTableCell align="right">
+              <Button onClick={()=> props.handleActionButtonClick(course)}
+                      variant="contained"
+                      color="primary">
+                  {props.actionButtonLabel}
+              </Button>
+          </StyledTableCell>
         </StyledTableRow>
       ));
   }
