@@ -1,6 +1,6 @@
 deployed to:<br />
-https://elegant-knuth-6622c8.netlify.app/enrolled-courses <br />
-http://faithful-friends.surge.sh/
+http://invincible-servant.surge.sh/
+https://elegant-knuth-6622c8.netlify.app/ <br />
 
 For Netlify, it will auto rebuild and deploy for any update.<br />
 For Surge, go to terminal and run surge to reupload it.
