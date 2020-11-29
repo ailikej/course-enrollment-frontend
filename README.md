@@ -1,3 +1,10 @@
+deployed to:
+https://elegant-knuth-6622c8.netlify.app/enrolled-courses
+http://faithful-friends.surge.sh/
+
+For Netlify, it will auto rebuild and deploy for any update.
+For Surge, go to terminal and run surge to reupload it.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
