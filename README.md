@@ -1,5 +1,5 @@
 deployed to:
-https://elegant-knuth-6622c8.netlify.app/enrolled-courses
+https://elegant-knuth-6622c8.netlify.app/enrolled-courses <br />
 http://faithful-friends.surge.sh/
 
 For Netlify, it will auto rebuild and deploy for any update.
